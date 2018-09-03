@@ -1,6 +1,6 @@
 //
 //  DownloadManager.m
-//  TestForArchive
+
 //
 //  Created by Developer on 2018/8/29.
 //  Copyright © 2018 Developer. All rights reserved.
