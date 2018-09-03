@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bPe-kW-4Qb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="W7D-SZ-0oU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bPe-kW-4Qb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qFt-z0-YkG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ecr-bg-q7D" kind="relationship" relationship="rootViewController" id="oYr-JQ-qv3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Shu-5c-kDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192.80000000000001" y="-579.76011994002999"/>
+        </scene>
+        <!--Multitask-->
+        <scene sceneID="FTx-hX-QVj">
+            <objects>
+                <tableViewController id="ecr-bg-q7D" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="755-Ue-f1F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="hHO-SK-ZdW">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="downloadCell" rowHeight="60" id="u5E-ir-cF7">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u5E-ir-cF7" id="zJy-m8-10s">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="UxW-pu-kq2">
+                                                    <rect key="frame" x="9" y="0.0" width="356" height="59.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kOa-iJ-Cnu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="59.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMu-JO-6Qg">
+                                                            <rect key="frame" x="83" y="0.0" width="136.5" height="59.5"/>
+                                                            <state key="normal" title="Download"/>
+                                                            <connections>
+                                                                <action selector="download_0:" destination="ecr-bg-q7D" eventType="touchUpInside" id="gsy-FP-HgC"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Skz-Pn-ExM">
+                                                            <rect key="frame" x="219.5" y="0.0" width="136.5" height="59.5"/>
+                                                            <state key="normal" title=" Suspend "/>
+                                                            <connections>
+                                                                <action selector="suspend_0:" destination="ecr-bg-q7D" eventType="touchUpInside" id="ZzM-26-iVX"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Owk-go-mr2">
+                                                    <rect key="frame" x="0.0" y="57.5" width="375" height="2"/>
+                                                </progressView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UxW-pu-kq2" firstAttribute="centerX" secondItem="zJy-m8-10s" secondAttribute="centerX" id="3IJ-9Z-eOB"/>
+                                                <constraint firstItem="Owk-go-mr2" firstAttribute="leading" secondItem="zJy-m8-10s" secondAttribute="leading" id="Cub-rk-anX"/>
+                                                <constraint firstAttribute="bottom" secondItem="Owk-go-mr2" secondAttribute="bottom" id="E4r-KY-PAe"/>
+                                                <constraint firstItem="UxW-pu-kq2" firstAttribute="width" secondItem="zJy-m8-10s" secondAttribute="width" multiplier="0.95" id="oZm-1G-TP3"/>
+                                                <constraint firstAttribute="trailing" secondItem="Owk-go-mr2" secondAttribute="trailing" id="qEN-Az-dbu"/>
+                                                <constraint firstItem="UxW-pu-kq2" firstAttribute="height" secondItem="zJy-m8-10s" secondAttribute="height" id="tHW-bn-AaJ"/>
+                                                <constraint firstItem="UxW-pu-kq2" firstAttribute="centerY" secondItem="zJy-m8-10s" secondAttribute="centerY" id="yma-mI-jQN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="downloadCell" rowHeight="60" id="2bx-zN-1fG">
+                                        <rect key="frame" x="0.0" y="95" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2bx-zN-1fG" id="239-f2-5Gc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Fcw-rt-UM3">
+                                                    <rect key="frame" x="9" y="0.0" width="356" height="59.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Q2G-hA-697">
+                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="59.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kq-Gi-R5D">
+                                                            <rect key="frame" x="83" y="0.0" width="136.5" height="59.5"/>
+                                                            <state key="normal" title="Download"/>
+                                                            <connections>
+                                                                <action selector="download_1:" destination="ecr-bg-q7D" eventType="touchUpInside" id="FpG-r6-EXf"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8v-dM-Ikw">
+                                                            <rect key="frame" x="219.5" y="0.0" width="136.5" height="59.5"/>
+                                                            <state key="normal" title=" Suspend "/>
+                                                            <connections>
+                                                                <action selector="suspend_1:" destination="ecr-bg-q7D" eventType="touchUpInside" id="Ykd-Om-CQt"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ozd-Xe-wIv">
+                                                    <rect key="frame" x="0.0" y="57.5" width="375" height="2"/>
+                                                </progressView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ozd-Xe-wIv" secondAttribute="trailing" id="4bo-8U-Mim"/>
+                                                <constraint firstItem="Fcw-rt-UM3" firstAttribute="centerY" secondItem="239-f2-5Gc" secondAttribute="centerY" id="NWc-h9-ALn"/>
+                                                <constraint firstAttribute="bottom" secondItem="ozd-Xe-wIv" secondAttribute="bottom" id="S2T-H7-Ezw"/>
+                                                <constraint firstItem="Fcw-rt-UM3" firstAttribute="centerX" secondItem="239-f2-5Gc" secondAttribute="centerX" id="ZQH-nt-45w"/>
+                                                <constraint firstItem="Fcw-rt-UM3" firstAttribute="width" secondItem="239-f2-5Gc" secondAttribute="width" multiplier="0.95" id="bLT-7f-ZmZ"/>
+                                                <constraint firstItem="ozd-Xe-wIv" firstAttribute="leading" secondItem="239-f2-5Gc" secondAttribute="leading" id="qKG-dN-ZgJ"/>
+                                                <constraint firstItem="Fcw-rt-UM3" firstAttribute="height" secondItem="239-f2-5Gc" secondAttribute="height" id="tXa-qS-oQN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="downloadCell" rowHeight="60" id="V4s-UY-HDh">
+                                        <rect key="frame" x="0.0" y="155" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V4s-UY-HDh" id="yZC-kj-w7i">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Xck-DC-W2M">
+                                                    <rect key="frame" x="9" y="0.0" width="356" height="59.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YNc-SF-HS8">
+                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="59.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcP-OZ-fUx">
+                                                            <rect key="frame" x="83" y="0.0" width="136.5" height="59.5"/>
+                                                            <state key="normal" title="Download"/>
+                                                            <connections>
+                                                                <action selector="download_2:" destination="ecr-bg-q7D" eventType="touchUpInside" id="kPF-16-5am"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uR-dr-tKc">
+                                                            <rect key="frame" x="219.5" y="0.0" width="136.5" height="59.5"/>
+                                                            <state key="normal" title=" Suspend "/>
+                                                            <connections>
+                                                                <action selector="suspend_2:" destination="ecr-bg-q7D" eventType="touchUpInside" id="4KG-4J-mDG"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pDb-h8-uPJ">
+                                                    <rect key="frame" x="0.0" y="57.5" width="375" height="2"/>
+                                                </progressView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xck-DC-W2M" firstAttribute="height" secondItem="yZC-kj-w7i" secondAttribute="height" id="3Zx-4D-cuv"/>
+                                                <constraint firstItem="Xck-DC-W2M" firstAttribute="centerY" secondItem="yZC-kj-w7i" secondAttribute="centerY" id="4bh-Ir-ulL"/>
+                                                <constraint firstAttribute="trailing" secondItem="pDb-h8-uPJ" secondAttribute="trailing" id="7BF-G5-OvC"/>
+                                                <constraint firstAttribute="bottom" secondItem="pDb-h8-uPJ" secondAttribute="bottom" id="9bw-Gv-WA6"/>
+                                                <constraint firstItem="pDb-h8-uPJ" firstAttribute="leading" secondItem="yZC-kj-w7i" secondAttribute="leading" id="EIh-7I-qND"/>
+                                                <constraint firstItem="Xck-DC-W2M" firstAttribute="width" secondItem="yZC-kj-w7i" secondAttribute="width" multiplier="0.95" id="UnF-Va-avA"/>
+                                                <constraint firstItem="Xck-DC-W2M" firstAttribute="centerX" secondItem="yZC-kj-w7i" secondAttribute="centerX" id="b0m-yV-CD2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ecr-bg-q7D" id="3Cf-Tp-nbb"/>
+                            <outlet property="delegate" destination="ecr-bg-q7D" id="CpY-uk-VkL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Multitask" id="FwI-fw-byb">
+                        <barButtonItem key="leftBarButtonItem" title="SuspendAll" id="EVv-4J-JkN">
+                            <connections>
+                                <action selector="cancelAllTasks:" destination="ecr-bg-q7D" id="yMr-sE-KWW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="StartAll" id="RrS-MT-xyt">
+                            <connections>
+                                <action selector="downloadAllDatas:" destination="ecr-bg-q7D" id="dyI-Eq-BcD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fileNameLable_0" destination="kOa-iJ-Cnu" id="04g-7U-jbY"/>
+                        <outlet property="fileNameLable_1" destination="Q2G-hA-697" id="3tX-TX-7ze"/>
+                        <outlet property="fileNameLable_2" destination="YNc-SF-HS8" id="Y0a-k8-gAD"/>
+                        <outlet property="progressView_0" destination="Owk-go-mr2" id="Lpn-Yi-edF"/>
+                        <outlet property="progressView_1" destination="ozd-Xe-wIv" id="Xyy-vT-imo"/>
+                        <outlet property="progressView_2" destination="pDb-h8-uPJ" id="vMk-ne-X1e"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tvh-CX-pUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950" y="-580"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_NSMultitaskDownloaderDemo {
+  umbrella header "Pods-NSMultitaskDownloaderDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
